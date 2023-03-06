@@ -1,0 +1,163 @@
+@import './fontawesome.min.css';
+
+:root {
+    --fg: #bcbcbc;
+    --bg: #2a2a2a;
+    --fg-alt: #dfdfdf;
+    --bg-alt: #414141;
+    --fg-active: #fff;
+    --bg-active: #3584e4;
+    --fg-alert: #ffffff;
+    --bg-alert: #6a0000;
+    --fg-active-alt: #fff;
+    --bg-active-alt: #096a3c;
+    
+    --max-body-width: 70rem;
+}
+
+.light:root {
+    --bg: #e6e3e3;
+    --fg: #4a4a4a;
+    --bg-alt: #f3f1f1;
+    --fg-alt: #414141;
+    --bg-active: #8dc2ff;
+    --fg-active: #001a39;
+    --fg-alert: #542800;
+    --bg-alert: #ef7400;
+    --fg-active-alt: #023800;
+    --bg-active-alt: #8cfec9;
+    
+    --max-body-width: 70rem;
+}
+
+.pink:root {
+    --fg: #bcbcbc;
+    --bg: #550054;
+    --fg-alt: #dfdfdf;
+    --bg-alt: #950093;
+    --fg-active: #550054;
+    --bg-active: #fff;
+    --fg-alert: #000650;
+    --bg-alert: #d1a806;
+    --fg-active-alt: #fff;
+    --bg-active-alt: #d35bff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-margin-top: 6rem;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    padding: 0.3rem;
+}
+
+main {
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    background-color: var(--bg-active);
+    color: var(--fg-active);
+    padding: 0.35rem;
+    outline: 0;
+}
+
+input[type="text"]:focus {
+    border: 1px solid var(--fg-active);
+}
+
+input[type="text"]::placeholder{
+    color: var(--fg-active);
+    opacity: 0.5;
+}
+
+button {
+    border: 0;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--bg);
+    color: var(--fg);
+    transition: all linear 0.2s;
+}
+
+@media (pointer: fine) {
+    button:hover {
+        background-color: var(--bg-alt);
+        color: var(--fg-alt);
+    }
+}
+
+button:active {
+    background-color: var(--bg-active);
+    color: var(--fg-active);
+}
+
+button:disabled {
+    opacity: 0.3;
+}
+
+i.icon {
+    font-size: 1.4rem;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.sticky.top {
+    top: 0;
+}
+
+.sticky.bottom {
+    bottom: 0;
+}
+
+.centered {
+    margin: 0 auto;
+    max-width: var(--max-body-width);
+}
+
+.background {
+    background-color: var(--bg);
+}
+
+hr.fade {
+    height: 1rem;
+    border: 0;
+    margin: 0;
+}
+
+.top hr.fade {
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--bg) 100%); 
+}
+
+.bottom hr.fade {
+    background: linear-gradient(0deg, var(--bg) 0%, rgba(0,0,0,0) 100%); 
+}
